@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.padaria.estoque.controller.ProdutoController"
+            prefWidth="700" prefHeight="400">
+    <top>
+        <Label text="Cadastro de Produtos" style="-fx-font-size:20px; -fx-font-weight:bold;" BorderPane.alignment="CENTER"/>
+    </top>
+    <center>
+        <VBox spacing="10" alignment="CENTER" style="-fx-padding:20;">
+            <HBox spacing="10">
+                <TextField fx:id="txtNome" promptText="Nome do produto"/>
+                <TextField fx:id="txtPreco" promptText="Preço"/>
+            </HBox>
+            <HBox spacing="10">
+                <TextField fx:id="txtQuantidade" promptText="Quantidade"/>
+                <TextField fx:id="txtFornecedor" promptText="ID do Fornecedor"/>
+            </HBox>
+            <HBox spacing="10">
+                <Button text="Salvar" onAction="#salvar"/>
+                <Button text="Editar" onAction="#editar"/>
+                <Button text="Excluir" onAction="#excluir"/>
+            </HBox>
+            <TableView fx:id="tabelaProdutos" prefHeight="200" onMouseClicked="#preencherCampos">
+                <columns>
+                    <TableColumn fx:id="colNome" text="Nome" prefWidth="200"/>
+                    <TableColumn fx:id="colPreco" text="Preço" prefWidth="100"/>
+                    <TableColumn fx:id="colQuantidade" text="Qtd" prefWidth="100"/>
+                    <TableColumn fx:id="colFornecedor" text="Fornecedor" prefWidth="150"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+</BorderPane>

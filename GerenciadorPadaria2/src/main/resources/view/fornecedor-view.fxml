@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.padaria.estoque.controller.FornecedorController"
+            prefWidth="700" prefHeight="400">
+    <top>
+        <Label text="Cadastro de Fornecedores" style="-fx-font-size:20px; -fx-font-weight:bold;" BorderPane.alignment="CENTER"/>
+    </top>
+    <center>
+        <VBox spacing="10" alignment="CENTER" style="-fx-padding:20;">
+            <HBox spacing="10">
+                <TextField fx:id="txtNome" promptText="Nome"/>
+                <TextField fx:id="txtTelefone" promptText="Telefone"/>
+            </HBox>
+            <HBox spacing="10">
+                <TextField fx:id="txtEmail" promptText="E-mail"/>
+                <TextField fx:id="txtCidade" promptText="Cidade"/>
+            </HBox>
+            <HBox spacing="10">
+                <Button text="Salvar" onAction="#salvar"/>
+                <Button text="Editar" onAction="#editar"/>
+                <Button text="Excluir" onAction="#excluir"/>
+            </HBox>
+            <TableView fx:id="tabelaFornecedores" prefHeight="200" onMouseClicked="#preencherCampos">
+                <columns>
+                    <TableColumn fx:id="colNome" text="Nome" prefWidth="150"/>
+                    <TableColumn fx:id="colCidade" text="Cidade" prefWidth="100"/>
+                    <TableColumn fx:id="colTelefone" text="Telefone" prefWidth="120"/>
+                    <TableColumn fx:id="colEmail" text="E-mail" prefWidth="200"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+</BorderPane>

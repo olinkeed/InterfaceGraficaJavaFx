@@ -1,0 +1,4 @@
+com\padaria\estoque\controller\ProdutoController.class
+com\padaria\estoque\controller\FornecedorController.class
+com\padaria\estoque\controller\MenuController.class
+com\padaria\estoque\application\Main.class
